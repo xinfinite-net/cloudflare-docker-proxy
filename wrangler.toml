@@ -7,12 +7,12 @@ port = 8787
 local_protocol = "http"
 
 [env.vars]
-CUSTOM_DOMAIN = "dk-n.cedu.ac.cn"
+CUSTOM_DOMAIN = ""
 
 [env.dev.vars]
 MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
-CUSTOM_DOMAIN = "dk-n.cedu.ac.cn"
+CUSTOM_DOMAIN = ""
 
 [env.production]
 name = "cloudflare-docker-proxy"
@@ -29,7 +29,7 @@ name = "cloudflare-docker-proxy"
 [env.production.vars]
 MODE = "production"
 TARGET_UPSTREAM = ""
-
+CUSTOM_DOMAIN = ""
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
 # route = { pattern = "docker-staging.libcuda.so", custom_domain = true }
